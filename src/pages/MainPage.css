@@ -1,0 +1,154 @@
+body {
+  background: #191919;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background: #191919;
+    border-radius: 40px;
+    box-shadow: 0 0 40px 10px #ffcc60, 0 0 0 8px #444 inset;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    max-width: 420px; /* 모바일 최대폭 */
+  }
+  
+.main-content {
+  /* min-height: 100vh; */
+  max-width: 500px;
+  width: 100vw;
+  margin: 0 auto;
+  background: #191919;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 100px; /* 네비게이션 높이만큼 */
+  box-sizing: border-box;
+}
+
+/* 별(점) 배경 */
+/* .star-bg::before, .star-bg::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+}
+.star-bg {
+  position: absolute;
+  width: 500px;
+  max-width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.star-bg::before {
+  box-shadow:
+    60px 60px 0 2px #ffe6b0,
+    400px 80px 0 1.5px #b5c6ff,
+    320px 160px 0 2px #ffb6b9,
+    200px 300px 0 1.5px #ffe6b0,
+    80px 500px 0 2px #b5c6ff,
+    420px 600px 0 1.5px #ffb6b9;
+  width: 2px; height: 2px; background: transparent;
+}
+.star-bg::after {
+  box-shadow:
+    120px 120px 0 1.5px #ffe6b0,
+    250px 350px 0 2px #b5c6ff,
+    480px 500px 0 1.5px #ffb6b9,
+    300px 650px 0 2px #ffe6b0;
+  width: 2px; height: 2px; background: transparent;
+} */
+
+.main-greeting {
+  color: #ffe6b0;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 18px;
+  z-index: 1;
+  padding: 0 32px;
+}
+
+.main-greeting h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main-greeting p {
+  font-size: 0.95rem;
+  color: #e0cfa7;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.main-hamster {
+  width: 160px;
+  margin: 50px 0 70px 0;
+  filter: drop-shadow(0 8px 24px #0008);
+  z-index: 1;
+}
+
+.main-gradient-btn {
+  width: 90%;
+  max-width: 340px;
+  min-width: 180px;
+  padding: 14px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  background: linear-gradient(90deg, #ffe6b0 0%, #ffb6b9 50%, #b5c6ff 100%);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  margin: 0 auto 24px auto;
+  cursor: pointer;
+  transition: filter 0.2s;
+  display: block;
+  z-index: 1;
+}
+
+.main-gradient-btn:hover {
+  filter: brightness(0.97);
+}
+
+.main-bottom-nav {
+  width: 100vw;
+  max-width: 500px;
+  height: 60px;
+  background: #191919;
+  border-top: 1.5px solid #ffe6b0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.nav-icon {
+  font-size: 1.7rem;
+  color: #ffe6b0;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.nav-icon.active {
+  opacity: 1;
+  color: #ffe6b0;
+  text-shadow: 0 0 8px #ffe6b0;
+}
