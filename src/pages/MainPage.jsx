@@ -1,6 +1,6 @@
 // src/pages/MainPage.jsx
 import React from 'react';
-import './MainPage.css'; // 새 CSS 파일을 만든다고 가정
+import './MainPage.css';
 import hamster from '../assets/hamster.png'
 
 const MainPage = () => {

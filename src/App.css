@@ -20,7 +20,7 @@
 }
 
 .App-header {
-  background: none; /* 배경 제거 */
+  background: none;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,20 +45,20 @@
   color: #3c1e1e;
   border: none;
   border-radius: 25px;
-  padding: 14px 0;              /* 위아래 여백은 늘리고, 좌우는 0 */
-  font-size: 1rem;              /* 글씨도 약간 키움 */
+  padding: 14px 0;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;      /* 가운데 정렬 */
+  justify-content: center;
   gap: 12px;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   margin-top: 0;
   transition: filter 0.2s;
-  width: 90vw;                  /* 화면의 90% 너비 */
-  max-width: 340px;             /* 최대 340px까지 */
-  min-width: 220px;             /* 최소 220px */
+  width: 90vw;
+  max-width: 340px;
+  min-width: 220px;       
 }
 
 .kakao-login-btn:hover {

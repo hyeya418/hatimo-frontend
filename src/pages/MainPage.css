@@ -17,7 +17,7 @@ body {
     align-items: center;
     overflow: hidden;
     position: relative;
-    max-width: 420px; /* 모바일 최대폭 */
+    max-width: 420px;
   }
   
 .main-content {
@@ -32,7 +32,7 @@ body {
   justify-content: flex-start;
   position: relative;
   overflow-x: hidden;
-  padding-bottom: 100px; /* 네비게이션 높이만큼 */
+  padding-bottom: 100px;
   box-sizing: border-box;
 }
 
