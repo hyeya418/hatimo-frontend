@@ -37,7 +37,6 @@
 
 .hatimo-logo {
   width: 180px;
-  margin-bottom: 230px;
 }
 
 .kakao-login-btn {
@@ -72,4 +71,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.hatimo-subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 180px;
 }

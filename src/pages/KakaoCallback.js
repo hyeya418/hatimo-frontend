@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { handleKakaoCallback } from '../api/auth';
+import './KakaoCallback.css';
 
 const KakaoCallback = () => {
   const [searchParams] = useSearchParams();
@@ -25,13 +26,9 @@ const KakaoCallback = () => {
   }, [searchParams, navigate]);
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh' 
-    }}>
-      로그인 처리 중...
+    <div className="loading-container">
+      <div className="loading-spinner"></div>
+      <p className="loading-text">로그인 처리 중...</p>
     </div>
   );
 };
