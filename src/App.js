@@ -2,6 +2,8 @@ import './App.css';
 import KakaoCallback from './pages/KakaoCallback';
 import MainPage from './pages/MainPage';
 import LoginError from './pages/LoginError';
+import EmotionSelect from './pages/EmotionSelect';
+import EmotionWrite from './pages/EmotionWrite';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import KakaoLoginButton from './components/KakaoLoginButton';
 import logo from './assets/hatimo-text-logo.png'
@@ -21,6 +23,8 @@ function App() {
           } />
           <Route path="/auth/kakao/callback" element={<KakaoCallback />} />
           <Route path="/main" element={<MainPage />} />
+          <Route path="/emotion-select" element={<EmotionSelect />} />
+          <Route path="/emotion-write" element={<EmotionWrite />} />
           <Route path="/login-error" element={<LoginError />} />
         </Routes>
       </div>

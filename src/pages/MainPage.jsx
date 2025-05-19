@@ -2,8 +2,10 @@
 import React from 'react';
 import './MainPage.css';
 import hamster from '../assets/hamster.png'
+import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
+  const navigate = useNavigate();
   return (
     <div className="main-content">
       <div className="star-bg"></div>
@@ -19,7 +21,7 @@ const MainPage = () => {
         alt="햄스터"
         className="main-hamster"
       />
-      <button className="main-gradient-btn">감정 기록</button>
+      <button className="main-gradient-btn" onClick={() => navigate('/emotion-select')}>감정 기록</button>
       <nav className="main-bottom-nav">
         <span className="nav-icon">📅</span>
         <span className="nav-icon active">🏠</span>

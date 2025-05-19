@@ -1,0 +1,105 @@
+.emotion-select-container {
+  background: #191919;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 32px 0;
+  position: relative;
+}
+
+.emotion-header {
+  width: 100vw;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 32px 0 18px 0;
+}
+
+.back-arrow {
+  position: absolute;
+  left: 24px;
+  font-size: 1.7rem;
+  color: #ffe6b0;
+  cursor: pointer;
+  top: 32px;
+}
+
+.emotion-title {
+  color: #ffe6b0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+.emotion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 90vw;
+  max-width: 380px;
+  margin: 30px auto 32px auto;
+}
+
+.emotion-card {
+  background: #232323;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  min-width: 120px;
+  box-shadow: 0 2px 12px #0006;
+  cursor: pointer;
+  transition: filter 0.15s, box-shadow 0.15s;
+}
+
+.emotion-card:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 4px 20px #0008;
+}
+
+.emotion-emoji {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-label {
+  color: #ffe6b0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.emotion-card.yellow .emotion-label { color: #ffe066; }
+.emotion-card.orange .emotion-label { color: #ffb86b; }
+.emotion-card.mint .emotion-label { color: #7fffd4; }
+.emotion-card.red .emotion-label { color: #ff6b6b; }
+.emotion-card.blue .emotion-label { color: #7ecbff; }
+.emotion-card.purple .emotion-label { color: #b39ddb; }
+
+.emotion-card.yellow .emotion-emoji { filter: drop-shadow(0 0 8px #ffe6b0); }
+.emotion-card.orange .emotion-emoji { filter: drop-shadow(0 0 8px #ffb86b); }
+.emotion-card.mint .emotion-emoji { filter: drop-shadow(0 0 8px #b5ffe6); }
+.emotion-card.red .emotion-emoji { filter: drop-shadow(0 0 8px #ffb6b9); }
+.emotion-card.blue .emotion-emoji { filter: drop-shadow(0 0 8px #b5c6ff); }
+.emotion-card.purple .emotion-emoji { filter: drop-shadow(0 0 8px #b5aaff); }
+
+.skip-btn {
+  background: none;
+  border: none;
+  color: #ffe6b0;
+  font-size: 1rem;
+  margin-top: 32px;
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+} 
