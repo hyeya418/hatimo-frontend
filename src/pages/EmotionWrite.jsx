@@ -15,6 +15,7 @@ const EmotionWrite = () => {
   const emotion = location.state?.emotion;
   const [text, setText] = React.useState('');
   const [showToast, setShowToast] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   if (!emotion) {
     // 감정 정보 없이 접근 시 감정 선택으로 이동
@@ -28,10 +29,12 @@ const EmotionWrite = () => {
   };
 
   const handleSubmit = async () => {
+    if (loading) return;
     if (!text.trim()) {
       alert('감정을 입력해 주세요!');
       return;
     }
+    setLoading(true);
     const emotionRequest = {
       emotionCode: emotion.code, // 영어 코드
       content: text,
@@ -43,6 +46,8 @@ const EmotionWrite = () => {
       setTimeout(() => navigate('/main'), 2000); // 3초 후 메인으로 이동
     } catch (e) {
       alert('감정 기록 전송에 실패했습니다.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -81,7 +86,11 @@ const EmotionWrite = () => {
       </div>
       <div className="emotion-write-bottom-bar">
         <button className="emotion-write-cancel" onClick={handleAiDraft}>쓰기 찬스✏️</button>
-        <button className="emotion-write-submit" onClick={handleSubmit}>감정 전송💖</button>
+        {loading ? (
+          <div className="emotion-loading-spinner"></div>
+        ) : (
+          <button className="emotion-write-submit" onClick={handleSubmit} disabled={loading}>감정 전송💖</button>
+        )}
       </div>
     </div>
   );

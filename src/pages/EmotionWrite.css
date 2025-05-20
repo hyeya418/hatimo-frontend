@@ -176,3 +176,18 @@
   display: block;
   margin: 0 auto;
 }
+
+.emotion-loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid #ffe6b0;
+  border-top: 3px solid #ffb6b9;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
