@@ -67,7 +67,9 @@ const EmotionWrite = () => {
       <div className="emotion-write-paper">
         <div className="emotion-write-date-row">
           <span className="emotion-write-date">{getToday()}</span>
-          <span className={`emotion-badge ${emotion.color}`}>#{emotion.label}</span>
+          {emotion.code !== 'SKIP' && (
+            <span className={`emotion-badge ${emotion.color}`}>#{emotion.label}</span>
+          )}
         </div>
         <textarea
           className="emotion-write-textarea"

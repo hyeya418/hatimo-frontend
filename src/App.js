@@ -4,6 +4,8 @@ import MainPage from './pages/MainPage';
 import LoginError from './pages/LoginError';
 import EmotionSelect from './pages/EmotionSelect';
 import EmotionWrite from './pages/EmotionWrite';
+import CalendarPage from './pages/CalendarPage';
+import SettingsPage from './pages/SettingsPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import KakaoLoginButton from './components/KakaoLoginButton';
 import logo from './assets/hatimo-text-logo.png'
@@ -26,6 +28,8 @@ function App() {
           <Route path="/emotion-select" element={<EmotionSelect />} />
           <Route path="/emotion-write" element={<EmotionWrite />} />
           <Route path="/login-error" element={<LoginError />} />
+          <Route path="/calendar" element={<CalendarPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </div>
     </Router>

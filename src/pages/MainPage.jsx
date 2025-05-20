@@ -3,6 +3,7 @@ import React from 'react';
 import './MainPage.css';
 import hamster from '../assets/hamster.png'
 import { useNavigate } from 'react-router-dom';
+import MainBottomNav from '../components/MainBottomNav';
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -22,11 +23,7 @@ const MainPage = () => {
         className="main-hamster"
       />
       <button className="main-gradient-btn" onClick={() => navigate('/emotion-select')}>감정 기록</button>
-      <nav className="main-bottom-nav">
-        <span className="nav-icon">📅</span>
-        <span className="nav-icon active">🏠</span>
-        <span className="nav-icon">⚙️</span>
-      </nav>
+      <MainBottomNav active="home" />
     </div>
   );
 };
