@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 💖 Hatimo Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**하티모(Hatimo)** 는 `heart` + `emotion`을 합친 이름으로,  
+사용자의 감정을 기록하고 AI가 따뜻하게 위로해주는 감정 기록 서비스입니다.
 
-## Available Scripts
+이 저장소는 하티모의 **프론트엔드(React)** 웹앱을 담당합니다.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 프로젝트 정보
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| 항목             | 내용                            |
+|------------------|---------------------------------|
+| 개발 언어        | JavaScript (ES6+)               |
+| 프레임워크       | React 18 (CRA 기반)             |
+| 주요 라이브러리  | react-router, react-calendar, axios |
+| 스타일           | CSS (일반/모듈), 모바일 감성 UI |
+| API 연동         | Spring Boot 백엔드, OpenAI (예정) |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧱 주요 기능 (예정 포함)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] 카카오톡 로그인 연동
+- [x] 감정 선택 및 감정 일기 기록
+- [x] 감정별 하트 아이콘, 감정별 컬러 테마
+- [x] 감정 캘린더(react-calendar 기반, 감정별 하트 표시)
+- [ ] 일기 미리보기 및 상세 보기
+- [x] 하단 고정 네비게이션(메인/캘린더/설정)
+- [ ] 설정 페이지(개인정보, 알림, 앱 정보 등)
+- [ ] AI 일기 초안 (예정)
+- [ ] 푸시 알림 연동 (예정)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 폴더 구조
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  api/            # API 유틸리티 (axios, auth, emotion 등)
+  assets/         # 이미지, 아이콘 등 정적 리소스
+  components/     # 재사용 컴포넌트(하단 네비, 로그인 버튼 등)
+  pages/          # 주요 페이지(메인, 감정선택, 기록, 캘린더, 설정 등)
+  App.js          # 라우팅
+  index.js        # 엔트리포인트
+  App.css, index.css  # 전역 스타일
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## ⚡️ 설치 및 실행
+```bash
+# 1. 의존성 설치
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 2. 개발 서버 실행
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 3. (필요시) .env 파일에 API 주소 등 환경변수 설정
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
