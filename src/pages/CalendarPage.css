@@ -28,9 +28,7 @@
   margin-top: 2px;
   opacity: 1;
 }
-.heart-img.gray {
-  opacity: 0.3;
-}
+
 .diary-preview {
   width: 90vw;
   max-width: 340px;
@@ -53,4 +51,34 @@
   font-size: 1.1rem;
   margin-bottom: 24px;
   box-shadow: 0 2px 12px #0002;
+}
+.react-calendar {
+  background: #232323 !important;
+  border: none !important;
+  color: #ffe6b0;
+}
+.react-calendar__navigation {
+  background: #232323 !important;
+  color: #ffe6b0;
+}
+.react-calendar__navigation button {
+  color: #ffe6b0 !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.react-calendar__month-view__weekdays {
+  background: #232323 !important;
+}
+.react-calendar__month-view__weekdays abbr {
+  color: #ffe6b0 !important;
+}
+.react-calendar__tile {
+  background: #232323 !important;
+  color: #ffe6b0;
+}
+.react-calendar__tile--active,
+.react-calendar__tile--now {
+  background: #191919 !important;
+  color: #ffe6b0 !important;
+  border-radius: 12px;
 } 
