@@ -15,7 +15,7 @@
 | 프레임워크       | React 18 (CRA 기반)             |
 | 주요 라이브러리  | react-router, react-calendar, axios |
 | 스타일           | CSS (일반/모듈), 모바일 감성 UI |
-| API 연동         | Spring Boot 백엔드, OpenAI (예정) |
+| API 연동         | Spring Boot 백엔드, OpenAI |
 
 ---
 
@@ -24,7 +24,7 @@
 - [x] 카카오톡 로그인 연동
 - [x] 감정 선택 및 감정 일기 기록
 - [x] 감정별 하트 아이콘, 감정별 컬러 테마
-- [x] 감정 캘린더(react-calendar 기반, 감정별 하트 표시)
+- [ ] 감정 캘린더(react-calendar 기반, 감정별 하트 표시)
 - [ ] 일기 미리보기 및 상세 보기
 - [x] 하단 고정 네비게이션(메인/캘린더/설정)
 - [ ] 설정 페이지(개인정보, 알림, 앱 정보 등)
