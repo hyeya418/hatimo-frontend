@@ -41,9 +41,17 @@ const EmotionWrite = () => {
     };
     console.log('emotionRequest to send:', emotionRequest);
     try {
-      await createEmotion(emotionRequest);
+      const res = await createEmotion(emotionRequest);
       setShowToast(true);
-      setTimeout(() => navigate('/main'), 2000); // 3초 후 메인으로 이동
+      // 감정 등록 후 상세 페이지로 이동 (emotionId 필요)
+      const emotionId = res?.data?.id || res?.id;
+      setTimeout(() => {
+        if (emotionId) {
+          navigate(`/emotion/${emotionId}`);
+        } else {
+          navigate('/main');
+        }
+      }, 2000);
     } catch (e) {
       alert('감정 기록 전송에 실패했습니다.');
     } finally {
