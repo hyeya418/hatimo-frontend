@@ -1,0 +1,29 @@
+.top-nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  background-color: #232323;
+  color: #ffe6b0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.top-nav-back-button {
+  background: none;
+  border: none;
+  color: #ffe6b0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.top-nav-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.top-nav-placeholder {
+  width: 40px; /* 뒤로가기 버튼 너비와 비슷하게 맞춰 중앙 정렬 유지 */
+} 
