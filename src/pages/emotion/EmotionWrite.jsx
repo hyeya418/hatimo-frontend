@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import TopNavBar from '../../components/TopNavBar';
+import { getEmotionCodes, createEmotion, getEmotionResponse } from '../../api/emotion';
+import hatimoCookieOven from '../../assets/hatimo-cookie-oven.png';
 import './EmotionWrite.css';
-import { createEmotion } from '../api/emotion';
-import ovenImg from '../assets/hatimo-cookie-oven.png';
 
 const getToday = () => {
   const d = new Date();
@@ -36,14 +37,13 @@ const EmotionWrite = () => {
     }
     setLoading(true);
     const emotionRequest = {
-      emotionCode: emotion.code, // 영어 코드
+      emotionCode: emotion.code,
       content: text,
     };
     console.log('emotionRequest to send:', emotionRequest);
     try {
       const res = await createEmotion(emotionRequest);
       setShowToast(true);
-      // 감정 등록 후 상세 페이지로 이동 (emotionId 필요)
       const emotionId = res?.data?.id || res?.id;
       setTimeout(() => {
         if (emotionId) {
@@ -65,7 +65,7 @@ const EmotionWrite = () => {
         <div className="emotion-toast-paper">
           <div className="emotion-toast-title">감정 전송 완료!</div>
           <div className="emotion-toast-desc">하티모가 곧 쿠키를 구워줄거예요.</div>
-          <img src={ovenImg} alt="오븐 속 하트쿠키" className="emotion-toast-img" />
+          <img src={hatimoCookieOven} alt="오븐 속 하트쿠키" className="emotion-toast-img" />
         </div>
       </div>
     );

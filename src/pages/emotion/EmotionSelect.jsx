@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './EmotionSelect.css';
 import { useNavigate } from 'react-router-dom';
-import { getEmotionCodes } from '../api/emotion';
-import heartYellow from '../assets/emotion-heart-yellow.png';
-import heartOrange from '../assets/emotion-heart-orange.png';
-import heartGreen from '../assets/emotion-heart-green.png';
-import heartRed from '../assets/emotion-heart-red.png';
-import heartBlue from '../assets/emotion-heart-blue.png';
-import heartPurple from '../assets/emotion-heart-purple.png';
+import TopNavBar from '../../components/TopNavBar';
+import { getEmotionCodes, recordEmotion } from '../../api/emotion';
+import heartYellow from '../../assets/emotion-heart-yellow.png';
+import heartOrange from '../../assets/emotion-heart-orange.png';
+import heartGreen from '../../assets/emotion-heart-green.png';
+import heartRed from '../../assets/emotion-heart-red.png';
+import heartBlue from '../../assets/emotion-heart-blue.png';
+import heartPurple from '../../assets/emotion-heart-purple.png';
 
 const emotionImgMap = {
   yellow: heartYellow,

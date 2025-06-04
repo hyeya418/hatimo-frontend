@@ -1,14 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import TopNavBar from '../components/TopNavBar';
-import { getEmotionResponse } from '../api/emotion';
+import TopNavBar from '../../components/TopNavBar';
+import { getEmotionResponse, getEmotionCodes } from '../../api/emotion';
 import './EmotionDetail.css';
+
+const EMOTION_COLORS = {
+  yellow: '#FCE48B',
+  orange: '#D76400',
+  mint: '#AFDAC5',
+  red: '#EF8686',
+  blue: '#A1C3F0',
+  purple: '#C4B2EA',
+  gray: '#bfa76a',
+};
 
 const EmotionDetail = () => {
   const { id } = useParams();
   const [emotionDetail, setEmotionDetail] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [emotionNameMap, setEmotionNameMap] = useState({});
+
+  useEffect(() => {
+    const fetchEmotionCodes = async () => {
+      try {
+        const response = await getEmotionCodes();
+        if (response.code === 'SUCCESS') {
+          const nameMap = {};
+          response.data.forEach(emotion => {
+            nameMap[emotion.code] = emotion.label;
+          });
+          setEmotionNameMap(nameMap);
+        }
+      } catch (err) {
+        console.error('감정 코드 조회 실패:', err);
+      }
+    };
+
+    fetchEmotionCodes();
+  }, []);
 
   useEffect(() => {
     const fetchEmotionDetail = async () => {
@@ -24,6 +54,7 @@ const EmotionDetail = () => {
             emotionCode: response.data[0].emotion.emotionCode,
             content: response.data[0].emotion.content,
             gptResponse: response.data[0].gptResponse,
+            color: response.data[0].emotion.color,
           });
         } else {
           setError('감정 상세 데이터를 불러오는데 실패했습니다.');
@@ -61,7 +92,13 @@ const EmotionDetail = () => {
           <div className="emotion-detail-date-row">
             <span className="emotion-detail-date">{emotionDetail.date} <span role="img" aria-label="달력">🗓️</span></span>
             {emotionDetail.emotionCode && (
-              <span className="emotion-tag">#{emotionDetail.emotionCode}</span>
+              console.log('EmotionDetail - emotionDetail.color:', emotionDetail.color),
+              console.log('EmotionDetail - EMOTION_COLORS:', EMOTION_COLORS),
+              console.log('EmotionDetail - Calculated Background Color:', EMOTION_COLORS[emotionDetail.color] || EMOTION_COLORS.gray),
+              <span 
+                className="emotion-tag"
+                style={{ backgroundColor: EMOTION_COLORS[emotionDetail.color] || EMOTION_COLORS.gray }}
+              >#{emotionNameMap[emotionDetail.emotionCode] || emotionDetail.emotionCode}</span>
             )}
           </div>
           <div className="emotion-detail-title">내가 기록한 감정 <span role="img" aria-label="하트">💖</span></div>
