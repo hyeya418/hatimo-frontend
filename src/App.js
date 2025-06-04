@@ -1,12 +1,12 @@
 import './App.css';
-import KakaoCallback from './pages/KakaoCallback';
-import MainPage from './pages/MainPage';
-import LoginError from './pages/LoginError';
-import EmotionSelect from './pages/EmotionSelect';
-import EmotionWrite from './pages/EmotionWrite';
-import CalendarPage from './pages/CalendarPage';
-import SettingsPage from './pages/SettingsPage';
-import EmotionDetail from './pages/EmotionDetail';
+import KakaoCallback from './pages/kakao/KakaoCallback';
+import MainPage from './pages/main/MainPage';
+import LoginError from './pages/error/LoginError';
+import EmotionSelect from './pages/emotion/EmotionSelect';
+import EmotionWrite from './pages/emotion/EmotionWrite';
+import CalendarPage from './pages/calendar/CalendarPage';
+import SettingsPage from './pages/settings/SettingsPage';
+import EmotionDetail from './pages/emotion/EmotionDetail';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import KakaoLoginButton from './components/KakaoLoginButton';
 import logo from './assets/hatimo-text-logo.png'

@@ -6,8 +6,9 @@
   padding: 16px;
   background-color: #232323;
   color: #ffe6b0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .top-nav-back-button {
@@ -16,7 +17,7 @@
   color: #ffe6b0;
   font-size: 24px;
   cursor: pointer;
-  padding: 0 8px;
+  padding: 0 15px;
 }
 
 .top-nav-title {
@@ -25,5 +26,5 @@
 }
 
 .top-nav-placeholder {
-  width: 40px; /* 뒤로가기 버튼 너비와 비슷하게 맞춰 중앙 정렬 유지 */
+  width: 40px;
 } 
